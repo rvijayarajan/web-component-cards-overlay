@@ -5,6 +5,7 @@
 	app.component("wcCardsOverlay", {
 		templateUrl: "cards-overlay.html",
 		bindings: {
+			config: "<cardsConfig"
 		},
 		controller: "CardsOverlayController"
 	});

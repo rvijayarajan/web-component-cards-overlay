@@ -1,8 +1,7 @@
 <div class="card bg-dark text-white">
-  <img src="..." class="card-img" alt="...">
+  <img src="{{$ctrl.config.image}}" class="card-img" alt="Overlay image unavailable. Kindly check the source url.">
   <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+    <h5 class="card-title" ng-if="$ctrl.config.title">{{$ctrl.config.title}}</h5>
+    <p class="card-text" ng-repeat="bodyText in $ctrl.config.bodyTexts track by $index" ng-if="$ctrl.config.bodyTexts.length>0">{{bodyText.text}}</p>
   </div>
 </div>
